@@ -57,18 +57,26 @@ extension MindView {
         #warning("TODO: add line")
         guard let viewModel = self.viewModel else { return }
         resetChildMindView()
-        self.childMindView = viewModel.childViewModels.map {
+        addChildMindViews(viewModel.childViewModels.map {
             let mindView = MindView(frame: CGRect.zero)
             mindView.viewModel = $0
-            addSubview(mindView)
             return mindView
-        }
-        
+        })
+        addLines()
         let rect = self.frame
         self.frame = CGRect(origin: rect.origin, size: viewModel.size)
     }
     
+    private func resetLines() {
+        
+    }
+    
+    private func addLines() {
+        
+    }
+    
     private func resetChildMindView() {
+        resetLines()
         self.childMindView.forEach {
             if $0.superview != nil {
                 $0.removeFromSuperview()

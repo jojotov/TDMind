@@ -20,6 +20,9 @@ protocol Resizing {
 protocol MindNodeSizing: Sizing, Resizing { }
 protocol MindNodeStylePresenting {
     var backgroundColor: UIColor { get }
+    var selectedBorderColor: UIColor { get }
+    var font: UIFont { get }
+    var textColor: UIColor { get }
 }
 
 protocol MindNodeTextPresenting {

@@ -157,8 +157,13 @@ extension MindNodeView: MindNodeEventSender {
     override var isSelected: Bool {
         didSet {
             if self.isSelected {
-                self.layer.borderColor = UIColor.black.cgColor
                 self.layer.borderWidth = 2
+                if let presenting = self.presenting {
+                    self.layer.borderColor = presenting.selectedBorderColor.cgColor
+                } else {
+                    // default style
+                    self.layer.borderColor = UIColor.systemBlue.cgColor
+                }
             } else {
                 self.layer.borderColor = nil
                 self.layer.borderWidth = 0

@@ -10,12 +10,40 @@
 import UIKit
 
 enum MindNodeStyle {
+    case root
     case `default`
 }
 
 extension MindNodeStyle: MindNodeStylePresenting {
+    var font: UIFont {
+        switch self {
+        case .root:
+            return UIFont.boldSystemFont(ofSize: 24)
+        case .default:
+            return UIFont.systemFont(ofSize: 18)
+        }
+    }
+    
+    var textColor: UIColor {
+        switch self {
+        case .root:
+            return UIColor.white
+        case .default:
+            return UIColor.label
+        }
+    }
+    
     var backgroundColor: UIColor {
-        UIColor.lightGray
+        switch self {
+        case .root:
+            return UIColor.systemIndigo
+        case .default:
+            return UIColor.systemGray6
+        }
+    }
+    
+    var selectedBorderColor: UIColor {
+        return UIColor.systemPink
     }
 }
 
@@ -39,6 +67,10 @@ class MindNodeViewModel {
         self.node = node
         node?.operationDelegate = self
         
+        if node?.parent == nil {
+            style = .root
+        }
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.globalSelectedNodeDidChanged), name: GlobalMindNotification.SelectedNodeChanged, object: nil)
     }
 }
@@ -50,19 +82,23 @@ extension MindNodeViewModel: MindNodePresenting {
     }
     
     var font: UIFont {
-        UIFont.systemFont(ofSize: 18)
+        style.font
     }
     
     var backgroundColor: UIColor {
         style.backgroundColor
     }
     
+    var selectedBorderColor: UIColor {
+        style.selectedBorderColor
+    }
+    
     var textColor: UIColor {
-        return UIColor.white
+        style.textColor
     }
     
     var size: CGSize {
-        return _size
+        _size
     }
         
     func resize(_ size: CGSize) {
