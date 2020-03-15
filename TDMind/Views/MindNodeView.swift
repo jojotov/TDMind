@@ -57,20 +57,12 @@ class MindNodeView: UIButton {
         let textField = NoTappingTextFiled(frame: .zero)
         textField.forwardingTarget = self
         textField.backgroundColor = UIColor.clear
-//        textField.isUserInteractionEnabled = false
         textField.delegate = self
         textField.addTarget(self, action: #selector(textFieldDidChanged(_:)), for: .editingChanged)
         addSubview(textField)
         return textField
     }()
     
-    // blocking tap
-    lazy var textFiledOverlay: UIView = {
-        let view = UIView(frame: .zero)
-        view.backgroundColor = UIColor.clear
-//        insertSubview(view, aboveSubview: self.textField)
-        return view
-    }()
     
     var viewModel: MindNodeViewModel? {
         didSet {
@@ -138,7 +130,6 @@ extension MindNodeView {
                                  y: MindNodeLayout.textFieldTop,
                                  width: bounds.size.width - 2 * MindNodeLayout.textFieldLeading,
                                  height: bounds.size.height - 2 * MindNodeLayout.textFieldTop)
-        textFiledOverlay.frame = textField.frame
     }
 }
 

@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Block the tapping event of text field and forward the event to target responder if existed.
 class NoTappingTextFiled: UITextField {
     weak var forwardingTarget: UIView? // try forwarding all events to the target
     

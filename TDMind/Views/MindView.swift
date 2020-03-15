@@ -50,8 +50,6 @@ class MindView: UIView {
 
 extension MindView {
     private func setup() {
-        #warning("TODO: remove Debug")
-        self.backgroundColor = UIColor.cyan // debug
         self.addSubview(self.headButton)
     }
     
