@@ -162,7 +162,7 @@ extension MindView {
             guard let childPresenting = mindView.presenting else {
                 continue
             }
-            mindView.frame = CGRect(x: self.headButton.frame.maxX + 50,
+            mindView.frame = CGRect(x: self.headButton.frame.maxX + MindLayout.horizontalMindGap,
                               y: childMindViewMaxY,
                               width: childPresenting.size.width,
                               height: childPresenting.size.height)

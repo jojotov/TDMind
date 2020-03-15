@@ -48,7 +48,8 @@ extension MindViewModel: MindPresenting {
     
     var size: CGSize {
         let childHeight =  childMindsPresenting.map { $0.size.height }.reduce(0,+)
-        let size = CGSize(width: childMindsPresenting.map { $0.size.width }.reduce(nodePresenting.size.width, +), height: childHeight > 0 ? childHeight : nodePresenting.size.height + 20)
+        let childWidth =  childMindsPresenting.map { $0.size.width }.reduce(MindLayout.horizontalMindGap,+)
+        let size = CGSize(width: childWidth + nodePresenting.size.width, height: childHeight > 0 ? childHeight : nodePresenting.size.height + MindLayout.verticalMindGap)
         return size
     }
 }

@@ -12,6 +12,7 @@
 		EB4F7728241D2D6600FA7ED1 /* MindDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F7727241D2D6600FA7ED1 /* MindDelegates.swift */; };
 		EB4F772A241E097B00FA7ED1 /* ScaleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F7729241E097B00FA7ED1 /* ScaleHelper.swift */; };
 		EB4F772C241E41A900FA7ED1 /* NoTappingTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F772B241E41A900FA7ED1 /* NoTappingTextFiled.swift */; };
+		EB4F772F241E6F6F00FA7ED1 /* MindLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F772E241E6F6F00FA7ED1 /* MindLayout.swift */; };
 		EB5F20632417D8280070334A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F20622417D8280070334A /* AppDelegate.swift */; };
 		EB5F20652417D8280070334A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F20642417D8280070334A /* SceneDelegate.swift */; };
 		EB5F20672417D8280070334A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F20662417D8280070334A /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		EB4F7727241D2D6600FA7ED1 /* MindDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindDelegates.swift; sourceTree = "<group>"; };
 		EB4F7729241E097B00FA7ED1 /* ScaleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleHelper.swift; sourceTree = "<group>"; };
 		EB4F772B241E41A900FA7ED1 /* NoTappingTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTappingTextFiled.swift; sourceTree = "<group>"; };
+		EB4F772E241E6F6F00FA7ED1 /* MindLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindLayout.swift; sourceTree = "<group>"; };
 		EB5F205F2417D8280070334A /* TDMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5F20622417D8280070334A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB5F20642417D8280070334A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB4F772D241E6F4A00FA7ED1 /* Calculating */ = {
+			isa = PBXGroup;
+			children = (
+				EB4F7729241E097B00FA7ED1 /* ScaleHelper.swift */,
+				EB4F772E241E6F6F00FA7ED1 /* MindLayout.swift */,
+			);
+			path = Calculating;
+			sourceTree = "<group>";
+		};
 		EB5F20562417D8280070334A = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +114,7 @@
 		EB5F20612417D8280070334A /* TDMind */ = {
 			isa = PBXGroup;
 			children = (
+				EB4F772D241E6F4A00FA7ED1 /* Calculating */,
 				EB5F20872417D9B70070334A /* Protocols */,
 				EB5F20862417D9B10070334A /* ViewModels */,
 				EB5F20852417D9AC0070334A /* Views */,
@@ -140,7 +152,6 @@
 		EB5F20852417D9AC0070334A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EB4F7729241E097B00FA7ED1 /* ScaleHelper.swift */,
 				EB5F2097241918F50070334A /* MindNodeView.swift */,
 				EB5F2099241918FE0070334A /* MindView.swift */,
 				EB4F772B241E41A900FA7ED1 /* NoTappingTextFiled.swift */,
@@ -269,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB4F7728241D2D6600FA7ED1 /* MindDelegates.swift in Sources */,
+				EB4F772F241E6F6F00FA7ED1 /* MindLayout.swift in Sources */,
 				EB4F7726241C836800FA7ED1 /* MindNodeViewModel.swift in Sources */,
 				EB5F2096241917960070334A /* MindViewModel.swift in Sources */,
 				EB5F2098241918F50070334A /* MindNodeView.swift in Sources */,
