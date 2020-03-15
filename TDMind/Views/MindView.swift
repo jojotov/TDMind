@@ -56,7 +56,6 @@ extension MindView {
     }
     
     private func reloadUI() {
-        #warning("TODO: add line")
         guard let viewModel = self.viewModel else { return }
         resetChildMindView()
         addChildMindViews(viewModel.childViewModels.map {
